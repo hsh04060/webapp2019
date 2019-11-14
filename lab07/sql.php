@@ -15,7 +15,7 @@
         if(isset($_POST["dbname"]) and isset($_POST["query"])) {
 
             $dbname = $_POST["dbname"];
-            $db = new PDO("mysql:dbname=$dbname", "root", "asd890");
+            $db = new PDO("mysql:dbname=$dbname", "root", "root");
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sqlquery = $_POST["query"];
             $rows = $db->query($sqlquery,PDO::FETCH_ASSOC);
